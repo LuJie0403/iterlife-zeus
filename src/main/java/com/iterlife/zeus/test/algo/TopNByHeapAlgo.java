@@ -1,4 +1,4 @@
-package com.iterlife.zeus.algorithm;
+package com.iterlife.zeus.test.algo;
 
 import java.util.Iterator;
 import java.util.Scanner;
@@ -6,12 +6,12 @@ import java.util.Scanner;
 import com.iterlife.zeus.test.service.impl.FixedSizeBigHeap;
 import com.iterlife.zeus.test.service.impl.FixedSizeSmallHeap;
 /**
-*
-* @desc Top N算法
-* @author Lu Jie
-* @date 2019 2019年3月23日 上午11:24:28
-* @tags 
-*/
+ *
+ * @desc Top N算法
+ * @author Lu Jie
+ * @date 2019 2019年3月23日 上午11:24:28
+ * @tags
+ */
 public class TopNByHeapAlgo {
 
 	public static void main(String args[]) {
