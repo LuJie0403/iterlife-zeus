@@ -7,7 +7,7 @@
  * https://www.iterlife.com
  *
  **/
-package com.iterlife.zeus.algorithm;
+package com.iterlife.zeus.test.algo;
 
 /**
  *
