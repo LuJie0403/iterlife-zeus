@@ -10,10 +10,10 @@ import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
-public class CglibDynamicProxy implements MethodInterceptor {
+public class CglibDynamicProxyTest implements MethodInterceptor {
 	private ByeServiceImpl byeService;
 
-	public CglibDynamicProxy(ByeServiceImpl byeService) {
+	public CglibDynamicProxyTest(ByeServiceImpl byeService) {
 		this.byeService = byeService;
 	}
 
@@ -35,7 +35,7 @@ public class CglibDynamicProxy implements MethodInterceptor {
 				"G:\\IterLife_Java1.8.x_WorkSpace\\zeus\\target\\output");
 		Enhancer enhancer = new Enhancer();
 		enhancer.setSuperclass(ByeServiceImpl.class);
-		enhancer.setCallback(new CglibDynamicProxy(new ByeServiceImpl()));
+		enhancer.setCallback(new CglibDynamicProxyTest(new ByeServiceImpl()));
 
 		Object proxyObj = enhancer.create();
 		if (proxyObj instanceof ByeServiceImpl) {

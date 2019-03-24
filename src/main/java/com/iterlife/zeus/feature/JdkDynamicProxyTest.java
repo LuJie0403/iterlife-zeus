@@ -8,11 +8,11 @@ import java.util.Arrays;
 import com.iterlife.zeus.service.HelloService;
 import com.iterlife.zeus.service.impl.HelloServiceImp;
 
-public class JdkDynamicProxy implements InvocationHandler {
+public class JdkDynamicProxyTest implements InvocationHandler {
 
 	private HelloService helloService;
 
-	public JdkDynamicProxy(HelloService helloService) {
+	public JdkDynamicProxyTest(HelloService helloService) {
 		this.helloService = helloService;
 	}
 
@@ -34,7 +34,7 @@ public class JdkDynamicProxy implements InvocationHandler {
 		Object proxyObj = Proxy.newProxyInstance(
 				HelloService.class.getClassLoader(),
 				new Class<?>[]{HelloService.class},
-				new JdkDynamicProxy(new HelloServiceImp()));
+				new JdkDynamicProxyTest(new HelloServiceImp()));
 		if (proxyObj instanceof HelloService) {
 			((HelloService) proxyObj).say("Lu Jie");
 		}

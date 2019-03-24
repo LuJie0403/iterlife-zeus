@@ -9,7 +9,7 @@ import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
-public class JvmException {
+public class JvmExceptionTest {
 
     public static void main(String[] args) {
         /**
