@@ -7,11 +7,9 @@
  * https://www.iterlife.com
  *
  **/
-package com.iterlife.zeus.test;
+package com.iterlife.zeus.structure;
 
-import java.util.Deque;
 import java.util.Stack;
-import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  *
@@ -20,11 +18,11 @@ import java.util.concurrent.LinkedBlockingDeque;
  * @date 2019 2019年3月6日 下午2:55:59
  * @tags
  */
-public class BinaryTreeTest {
+public class BinaryTree {
 
 	private TreeNode root = null;
 
-	public BinaryTreeTest() {
+	public BinaryTree() {
 		root = new TreeNode(1, "rootNode(A)");
 	}
 
@@ -184,7 +182,7 @@ public class BinaryTreeTest {
 
 	// 中序遍历的非递归实现
 	public void nonRecInOrder(TreeNode p) {
-		Stack<TreeNode> stack = new Stack<BinaryTreeTest.TreeNode>();
+		Stack<TreeNode> stack = new Stack<BinaryTree.TreeNode>();
 		TreeNode node = p;
 		while (node != null || stack.size() > 0) {
 			// 存在左子树
@@ -203,7 +201,7 @@ public class BinaryTreeTest {
 
 	// 后序遍历的非递归实现
 	public void noRecPostOrder(TreeNode p) {
-		Stack<TreeNode> stack = new Stack<BinaryTreeTest.TreeNode>();
+		Stack<TreeNode> stack = new Stack<BinaryTree.TreeNode>();
 		TreeNode node = p;
 		while (p != null) {
 			// 左子树入栈
@@ -239,12 +237,10 @@ public class BinaryTreeTest {
 	private class TreeNode {
 		private int key = 0;
 		private String data = null;
+		@SuppressWarnings("unused")
 		private boolean isVisted = false;
 		private TreeNode leftChild = null;
 		private TreeNode rightChild = null;
-
-		public TreeNode() {
-		}
 
 		/**
 		 * @param key
@@ -263,7 +259,7 @@ public class BinaryTreeTest {
 
 	// 测试
 	public static void main(String[] args) {
-		BinaryTreeTest binTree = new BinaryTreeTest();
+		BinaryTree binTree = new BinaryTree();
 		binTree.createBinTree(binTree.root);
 		System.out.println("the size of the tree is " + binTree.size());
 		System.out.println("the height of the tree is " + binTree.height());

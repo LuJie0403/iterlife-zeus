@@ -7,7 +7,7 @@
  * https://www.iterlife.com
  *
  **/
-package com.iterlife.zeus.test;
+package com.iterlife.zeus.feature;
 
 /**
  *
@@ -17,7 +17,7 @@ package com.iterlife.zeus.test;
  * @tags
  */
 
-public class SynchronizedTest implements Runnable {
+public class Synchronized implements Runnable {
 
 	int b = 100;
 
@@ -33,7 +33,7 @@ public class SynchronizedTest implements Runnable {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		SynchronizedTest tt = new SynchronizedTest();
+		Synchronized tt = new Synchronized();
 		Thread t = new Thread(tt);
 		t.start();
 		tt.m2();

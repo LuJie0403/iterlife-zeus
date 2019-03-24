@@ -1,10 +1,10 @@
-package com.iterlife.zeus.test.algo;
+package com.iterlife.zeus.algorithm;
 
 import java.util.Iterator;
 import java.util.Scanner;
 
-import com.iterlife.zeus.test.service.impl.FixedSizeBigHeap;
-import com.iterlife.zeus.test.service.impl.FixedSizeSmallHeap;
+import com.iterlife.zeus.structure.FixedSizeBigHeap;
+import com.iterlife.zeus.structure.FixedSizeSmallHeap;
 /**
  *
  * @desc Top N算法

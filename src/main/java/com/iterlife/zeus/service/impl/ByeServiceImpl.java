@@ -1,4 +1,4 @@
-package com.iterlife.zeus.test.service.impl;
+package com.iterlife.zeus.service.impl;
 
 public class ByeServiceImpl {
 

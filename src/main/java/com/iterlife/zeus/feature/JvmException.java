@@ -1,4 +1,4 @@
-package com.iterlife.zeus.test;
+package com.iterlife.zeus.feature;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
-public class JvmExceptionTest {
+public class JvmException {
 
     public static void main(String[] args) {
         /**

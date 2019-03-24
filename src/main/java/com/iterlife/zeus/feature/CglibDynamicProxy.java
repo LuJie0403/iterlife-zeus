@@ -1,19 +1,19 @@
-package com.iterlife.zeus.test;
+package com.iterlife.zeus.feature;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
+
+import com.iterlife.zeus.service.impl.ByeServiceImpl;
 
 import net.sf.cglib.core.DebuggingClassWriter;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
-import com.iterlife.zeus.test.service.impl.ByeServiceImpl;
-
-public class CglibDynamicProxyTest implements MethodInterceptor {
+public class CglibDynamicProxy implements MethodInterceptor {
 	private ByeServiceImpl byeService;
 
-	public CglibDynamicProxyTest(ByeServiceImpl byeService) {
+	public CglibDynamicProxy(ByeServiceImpl byeService) {
 		this.byeService = byeService;
 	}
 
@@ -35,7 +35,7 @@ public class CglibDynamicProxyTest implements MethodInterceptor {
 				"G:\\IterLife_Java1.8.x_WorkSpace\\zeus\\target\\output");
 		Enhancer enhancer = new Enhancer();
 		enhancer.setSuperclass(ByeServiceImpl.class);
-		enhancer.setCallback(new CglibDynamicProxyTest(new ByeServiceImpl()));
+		enhancer.setCallback(new CglibDynamicProxy(new ByeServiceImpl()));
 
 		Object proxyObj = enhancer.create();
 		if (proxyObj instanceof ByeServiceImpl) {

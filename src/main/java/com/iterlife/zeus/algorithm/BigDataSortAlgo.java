@@ -7,7 +7,7 @@
  * https://www.iterlife.com
  *
  **/
-package com.iterlife.zeus.test.algo;
+package com.iterlife.zeus.algorithm;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
