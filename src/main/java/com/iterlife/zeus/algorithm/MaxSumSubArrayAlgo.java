@@ -1,7 +1,7 @@
 /**
  *
  * @project iterlife-zeus
- * @file com.iterlife.zeus.algorithm.MaxSumArrayAlgo.java
+ * @file com.iterlife.zeus.algorithm.MaxSumSubArrayAlgo.java
  * @version 1.0.0
  * Copyright 2019 - 2019 for Lu Jie
  * https://www.iterlife.com
