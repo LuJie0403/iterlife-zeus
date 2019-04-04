@@ -16,7 +16,8 @@ public class ThreadLocalTest {
         List list = new ArrayList();
         list.add("one");
         list.add("two");
-        list.add("thread");
+        list.add("three");
+        list.add("zero");
         mThreadLocal.set(list);
         System.out.println(mThreadLocal.get());
         System.out.println(nThreadLocal.get());
