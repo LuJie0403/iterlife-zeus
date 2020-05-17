@@ -7,13 +7,13 @@
  * https://www.iterlife.com
  *
  **/
-package com.iterlife.zeus.structure;
+package com.iterlife.zeus.model;
 
 import java.util.Stack;
 
 /**
  *
- * @desc
+ * @desc 二叉树
  * @author Lu Jie
  * @date 2019 2019年3月6日 下午2:55:59
  * @tags

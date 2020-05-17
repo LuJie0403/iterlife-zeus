@@ -1,7 +1,7 @@
 package com.iterlife.zeus.feature;
 
 
-import com.iterlife.zeus.common.entity.User;
+import com.iterlife.zeus.entity.User;
 
 import java.util.ArrayList;
 import java.util.Comparator;

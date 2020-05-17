@@ -1,4 +1,4 @@
-package com.iterlife.zeus.common.entity;
+package com.iterlife.zeus.entity;
 
 import lombok.*;
 
