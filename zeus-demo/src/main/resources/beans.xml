@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user1" name="user1" class="com.iterlife.spring.boot.demo.bean.User">
+        <property name="id" value="1"/>
+        <property name="name" value="lujie"/>
+        <property name="gender" value="male"/>
+        <property name="age" value="30"/>
+    </bean>
+
+    <bean id="userFactoryBean1"
+          class="com.iterlife.spring.boot.demo.factory.UserFactoryBean">
+        <qualifier type="com.iterlife.spring.boot.demo.bean.User" value="user1"/>
+    </bean>
+
+    <bean id="userFactoryBean2" name="userFactoryBean2"
+          class="com.iterlife.spring.boot.demo.factory.UserFactoryBean">
+        <property name="userStr" value="2;xuna;female;18"/>
+    </bean>
+
+</beans>
