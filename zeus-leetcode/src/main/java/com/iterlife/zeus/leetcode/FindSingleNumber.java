@@ -7,7 +7,7 @@
  * https://www.iterlife.com
  *
  **/
-package lang.leetcode;
+package com.iterlife.zeus.leetcode;
 
 import java.util.HashMap;
 import java.util.LinkedList;

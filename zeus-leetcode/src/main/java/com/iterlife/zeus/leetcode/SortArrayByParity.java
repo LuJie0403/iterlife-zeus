@@ -7,7 +7,7 @@
  * https://www.iterlife.com
  *
  **/
-package lang.leetcode;
+package com.iterlife.zeus.leetcode;
 
 /**
  *

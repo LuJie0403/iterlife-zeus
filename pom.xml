@@ -12,6 +12,7 @@
         <module>zeus-demo</module>
         <module>zeus-starter</module>
         <module>zeus-osf</module>
+        <module>zeus-leetcode</module>
     </modules>
     <packaging>pom</packaging>
 
