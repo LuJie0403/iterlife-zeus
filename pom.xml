@@ -11,6 +11,7 @@
         <module>zeus-spring</module>
         <module>zeus-demo</module>
         <module>zeus-starter</module>
+        <module>zeus-leetcode</module>
     </modules>
     <packaging>pom</packaging>
 
