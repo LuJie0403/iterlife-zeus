@@ -11,6 +11,7 @@
         <module>zeus-spring</module>
         <module>zeus-demo</module>
         <module>zeus-starter</module>
+        <module>zeus-osf</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -84,6 +85,14 @@
                 <version>1.16.16</version>
                 <scope>compile</scope>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.51</version>
+                <!--<version>1.2.51.sec10</version>-->
+            </dependency>
+
 
             <dependency>
                 <groupId>junit</groupId>
