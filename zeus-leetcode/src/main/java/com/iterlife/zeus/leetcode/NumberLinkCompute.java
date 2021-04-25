@@ -1,12 +1,9 @@
 package com.iterlife.zeus.leetcode;
 
-import org.w3c.dom.NodeList;
-
-import java.util.*;
-
 /**
  * @author Lu Jie
- * @desc https://leetcode-cn.com/problems/add-two-numbers/
+ * @desc CPU 加法器实现原理
+ * https://leetcode-cn.com/problems/add-two-numbers/
  * @date 2021-04-24 22:45:00
  * @tags Definition for singly-linked list.
  */
@@ -15,18 +12,8 @@ import java.util.*;
 public class NumberLinkCompute {
     public static void main(String[] args) {
 
-        ListNode l11 = new ListNode(9, null);
-
-        ListNode l210 = new ListNode(9, null);
-        ListNode l29 = new ListNode(9, l210);
-        ListNode l28 = new ListNode(9, l29);
-        ListNode l27 = new ListNode(9, l28);
-        ListNode l26 = new ListNode(9, l27);
-        ListNode l25 = new ListNode(9, l26);
-        ListNode l24 = new ListNode(9, l25);
-        ListNode l23 = new ListNode(9, l24);
-        ListNode l22 = new ListNode(9, l23);
-        ListNode l21 = new ListNode(1, l22);
+        ListNode l11 = new ListNode(7, null);
+        ListNode l21 = new ListNode(5, null);
 
         ListNode resultNode = new Solution().addTwoNumbers(l11, l21);
         while (resultNode != null) {
@@ -41,6 +28,50 @@ public class NumberLinkCompute {
 
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        return addTwoNumbers2(l1, l2);
+    }
+
+    private ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
+        int overflow = 0;
+        ListNode headNode = new ListNode(-1, null);
+        ListNode nextNode = headNode;
+        while (l1 != null || l2 != null || overflow > 0) {
+            if (l1 != null && l2 != null) {
+                int val = l1.val + l2.val + overflow;
+                nextNode.next = new ListNode(val % 10, null);
+                overflow = val >= 10 ? 1 : 0;
+                nextNode = nextNode.next;
+                l1 = l1.next;
+                l2 = l2.next;
+                continue;
+            }
+            if (l1 != null) {
+                int val = l1.val + overflow;
+                nextNode.next = new ListNode(val % 10, null);
+                overflow = val >= 10 ? 1 : 0;
+                nextNode = nextNode.next;
+                l1 = l1.next;
+                continue;
+            }
+            if (l2 != null) {
+                int val = l2.val + overflow;
+                nextNode.next = new ListNode(val % 10, null);
+                overflow = val >= 10 ? 1 : 0;
+                nextNode = nextNode.next;
+                l2 = l2.next;
+                continue;
+            }
+            if (overflow > 0) {
+                int val = overflow;
+                nextNode.next = new ListNode(val % 10, null);
+                overflow = val >= 10 ? 1 : 0;
+                nextNode = nextNode.next;
+            }
+        }
+        return headNode.next;
+    }
+
+    private ListNode addTwoNumbers1(ListNode l1, ListNode l2) {
         int overflow = 1;
         int i1 = 0;
         int i2 = 0;
