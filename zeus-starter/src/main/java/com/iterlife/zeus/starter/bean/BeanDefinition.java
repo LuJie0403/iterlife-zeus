@@ -1,13 +1,13 @@
 package com.iterlife.zeus.starter.bean;
 
-import com.iterlife.spring.boot.starter.config.BeanPropertyConfig;
+import com.iterlife.zeus.starter.config.BeanPropertyConfig;
+import com.iterlife.zeus.starter.service.BeanPropertyPrintService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.iterlife.spring.boot.starter.service.BeanPropertyPrintService;
 
 /**
  * @author lujie
