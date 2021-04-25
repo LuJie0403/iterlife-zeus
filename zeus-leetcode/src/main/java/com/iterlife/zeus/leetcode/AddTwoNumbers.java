@@ -9,23 +9,21 @@ package com.iterlife.zeus.leetcode;
  */
 
 
-public class NumberLinkAdder {
+public class AddTwoNumbers {
     public static void main(String[] args) {
 
         ListNode l11 = new ListNode(7, null);
         ListNode l21 = new ListNode(5, null);
 
-        ListNode resultNode = new Solution().addTwoNumbers(l11, l21);
+        ListNode resultNode = new AddTwoNumbersSolution().addTwoNumbers(l11, l21);
         while (resultNode != null) {
             System.out.print(resultNode.val + " ");
             resultNode = resultNode.next;
         }
     }
-
-
 }
 
-class Solution {
+class AddTwoNumbersSolution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         return addTwoNumbers3(l1, l2);
     }
