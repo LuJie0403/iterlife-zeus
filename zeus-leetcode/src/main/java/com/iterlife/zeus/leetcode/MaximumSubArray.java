@@ -1,7 +1,7 @@
 package com.iterlife.zeus.leetcode;
 
 /**
- * @desc:
+ * @desc:https://leetcode-cn.com/problems/maximum-subarray/
  * @author: lujie
  * @version: V1.0.0
  * @datetime: 2021/4/25 14:26
