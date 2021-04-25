@@ -9,7 +9,7 @@ package com.iterlife.zeus.leetcode;
  */
 
 
-public class NumberLinkCompute {
+public class NumberLinkAdder {
     public static void main(String[] args) {
 
         ListNode l11 = new ListNode(7, null);
@@ -20,7 +20,6 @@ public class NumberLinkCompute {
             System.out.print(resultNode.val + " ");
             resultNode = resultNode.next;
         }
-
     }
 
 
@@ -28,7 +27,30 @@ public class NumberLinkCompute {
 
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        return addTwoNumbers2(l1, l2);
+        return addTwoNumbers3(l1, l2);
+    }
+
+    public ListNode addTwoNumbers3(ListNode l1, ListNode l2) {
+        //头节点
+        ListNode headNode = new ListNode(-1, null);
+        //指向当前计算结果节点的位置执政
+        ListNode pointer = headNode;
+        //进位变量
+        int overflow = 0;
+        while (l1 != null || l2 != null || overflow > 0) {
+            if (l1 != null) {
+                overflow += l1.val;
+                l1 = l1.next;
+            }
+            if (l2 != null) {
+                overflow += l2.val;
+                l2 = l2.next;
+            }
+            pointer.next = new ListNode(overflow % 10, null);
+            pointer = pointer.next;
+            overflow /= 10;
+        }
+        return headNode.next;
     }
 
     private ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
