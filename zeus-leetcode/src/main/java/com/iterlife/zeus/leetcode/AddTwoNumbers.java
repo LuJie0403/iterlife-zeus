@@ -2,8 +2,7 @@ package com.iterlife.zeus.leetcode;
 
 /**
  * @author Lu Jie
- * @desc CPU 加法器实现原理
- * https://leetcode-cn.com/problems/add-two-numbers/
+ * @desc CPU 加法器实现原理 https://leetcode-cn.com/problems/add-two-numbers/
  * @date 2021-04-24 22:45:00
  * @tags Definition for singly-linked list.
  */
