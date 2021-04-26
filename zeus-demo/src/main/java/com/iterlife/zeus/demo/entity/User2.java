@@ -1,11 +1,10 @@
 package com.iterlife.zeus.demo.entity;
 
-import com.iterlife.spring.boot.starter.annotation.IterLife;
+import com.iterlife.zeus.starter.annotation.IterLife;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
 
 import java.lang.annotation.Annotation;
 

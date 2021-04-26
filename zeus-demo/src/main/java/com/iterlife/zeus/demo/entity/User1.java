@@ -1,16 +1,20 @@
 package com.iterlife.zeus.demo.entity;
 
 
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 @Data
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
-public class User {
+public class User1 {
     private String id;
 
     private String name;
 
     public int age;
 
-    public User(String id, String name, int age) {
+    public User1(String id, String name, int age) {
         this.id = id;
         this.name = name;
         this.age = age;
