@@ -40,7 +40,7 @@ public class FixedSizeBigHeap<E extends Comparable> {
 
     public List<E> list() {
         List<E> heapList = new ArrayList<E>(body);
-        Collections.sort((List<E>) heapList);
+        Collections.sort(heapList);
         return heapList;
     }
 

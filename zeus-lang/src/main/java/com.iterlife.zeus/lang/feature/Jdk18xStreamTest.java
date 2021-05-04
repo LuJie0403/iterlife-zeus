@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class Jdk18xStreamTest {
 
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         List< User > users = new ArrayList< User >();
         users.add(new User("100", "lujie", 26));
         users.add(new User("102", "zhangsan", 29));

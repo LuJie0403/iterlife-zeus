@@ -14,7 +14,7 @@ import lang.model.FixedSizeSmallHeap;
  */
 public class TopNByHeapAlgo {
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		FixedSizeSmallHeap<Integer> sHeap = new FixedSizeSmallHeap<Integer>(n);
@@ -35,7 +35,7 @@ public class TopNByHeapAlgo {
 			}) {
 				System.out.print("-" + sInt);
 			}
-			System.out.println("");
+			System.out.println();
 			for (Integer bInt : new Iterable<Integer>() {
 
 				@Override
@@ -45,7 +45,7 @@ public class TopNByHeapAlgo {
 			}) {
 				System.out.print("-" + bInt);
 			}
-			System.out.println("");
+			System.out.println();
 		}
 		sc.close();
 		System.out.println(sHeap.list());

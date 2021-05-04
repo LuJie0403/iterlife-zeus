@@ -8,9 +8,9 @@ import java.util.concurrent.TimeUnit;
 
 public class ThreadLocalTest {
 
-    private static ThreadLocal mThreadLocal = new ThreadLocal();
+    private static final ThreadLocal mThreadLocal = new ThreadLocal();
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         ThreadPoolExecutor linkedBlockTaskPool = new ThreadPoolExecutor(5, 10,
                 60, TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>());
         for (int i = 0; i < 5; ++i) {
@@ -24,7 +24,7 @@ public class ThreadLocalTest {
                         list.add("two");
                     }
                     mThreadLocal.set(list);
-                    System.out.println(String.format("i=%s,threadId=%s,context=%s", String.valueOf(k), Thread.currentThread().getId(), mThreadLocal.get()));
+                    System.out.println(String.format("i=%s,threadId=%s,context=%s", k, Thread.currentThread().getId(), mThreadLocal.get()));
                 }
             });
 

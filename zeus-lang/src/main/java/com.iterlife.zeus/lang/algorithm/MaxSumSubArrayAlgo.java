@@ -23,11 +23,11 @@ public class MaxSumSubArrayAlgo {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int array[] = {1, 3, -1, 2, 5, -3, -1, 32, -20, 13};
+		int[] array = {1, 3, -1, 2, 5, -3, -1, 32, -20, 13};
 		System.out.println(maxSum(array));
 	}
 
-	public static int maxSum(int array[]) {
+	public static int maxSum(int[] array) {
 		int maxSum = 0, tempSum = 0;
 		for (int i = 0; i < array.length; ++i) {
 			tempSum += array[i];

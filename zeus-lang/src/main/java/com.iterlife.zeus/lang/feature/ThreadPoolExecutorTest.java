@@ -11,8 +11,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ThreadPoolExecutorTest {
 
-	private static AtomicInteger taskId = new AtomicInteger(1);
-	private static AtomicInteger threadId = new AtomicInteger(1);
+	private static final AtomicInteger taskId = new AtomicInteger(1);
+	private static final AtomicInteger threadId = new AtomicInteger(1);
 
 	public static void main(String[] args) throws InterruptedException {
 		while (true) {

@@ -131,7 +131,7 @@ public class BinaryTree {
 	}
 
 	public void traverse(TreeNode subTree) {
-		System.out.println("key:" + subTree.key + "--name:" + subTree.data);;
+		System.out.println("key:" + subTree.key + "--name:" + subTree.data);
 		traverse(subTree.leftChild);
 		traverse(subTree.rightChild);
 	}
@@ -226,7 +226,7 @@ public class BinaryTree {
 
 	public void visted(TreeNode subTree) {
 		subTree.isVisted = true;
-		System.out.println("key:" + subTree.key + "--name:" + subTree.data);;
+		System.out.println("key:" + subTree.key + "--name:" + subTree.data);
 	}
 
 	/**

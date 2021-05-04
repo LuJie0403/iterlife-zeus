@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class ListObjetcTest {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         testIntegerReference();
     }
 

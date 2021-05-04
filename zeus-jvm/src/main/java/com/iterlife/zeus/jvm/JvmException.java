@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class JvmExceptionTest {
+public class JvmException {
 
     public static void main(String[] args) {
         /**

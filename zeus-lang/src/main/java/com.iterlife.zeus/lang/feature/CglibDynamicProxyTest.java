@@ -11,7 +11,7 @@ import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
 public class CglibDynamicProxyTest implements MethodInterceptor {
-	private ByeServiceImpl byeService;
+	private final ByeServiceImpl byeService;
 
 	public CglibDynamicProxyTest(ByeServiceImpl byeService) {
 		this.byeService = byeService;
@@ -30,7 +30,7 @@ public class CglibDynamicProxyTest implements MethodInterceptor {
 		return null;
 	}
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY,
 				"G:\\IterLife_Java1.8.x_WorkSpace\\zeus\\target\\output");
 		Enhancer enhancer = new Enhancer();

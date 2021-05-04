@@ -30,7 +30,7 @@ public class JdkDynamicProxyTest implements InvocationHandler {
 		return null;
 	}
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles",
 				"true");
 		Object proxyObj = Proxy.newProxyInstance(
