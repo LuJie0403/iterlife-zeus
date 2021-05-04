@@ -7,7 +7,7 @@
  * https://www.iterlife.com
  *
  **/
-package lang.algorithm;
+package com.iterlife.zeus.lang.algorithm;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

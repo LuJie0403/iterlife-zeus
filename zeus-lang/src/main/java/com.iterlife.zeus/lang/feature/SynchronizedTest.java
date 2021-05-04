@@ -7,7 +7,7 @@
  * https://www.iterlife.com
  *
  **/
-package lang.feature;
+package com.iterlife.zeus.lang.feature;
 
 /**
  *

@@ -1,4 +1,4 @@
-package lang.algorithm;
+package com.iterlife.zeus.lang.algorithm;
 
 import java.util.Iterator;
 import java.util.Scanner;

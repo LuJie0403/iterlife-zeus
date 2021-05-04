@@ -1,4 +1,4 @@
-package com.iterlife.zeus.feature;
+package com.iterlife.zeus.lang.feature;
 
 import java.util.ArrayList;
 import java.util.HashMap;

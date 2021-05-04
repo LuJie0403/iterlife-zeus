@@ -1,4 +1,4 @@
-package com.iterlife.zeus.test;
+package com.iterlife.zeus.lang.test;
 
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.stereotype.Service;

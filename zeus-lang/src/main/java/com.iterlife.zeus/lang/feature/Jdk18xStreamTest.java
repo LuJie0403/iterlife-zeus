@@ -1,4 +1,4 @@
-package lang.feature;
+package com.iterlife.zeus.lang.feature;
 
 
 import com.iterlife.zeus.demo.entity.User;

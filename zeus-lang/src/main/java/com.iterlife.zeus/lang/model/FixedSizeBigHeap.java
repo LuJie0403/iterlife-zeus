@@ -1,4 +1,4 @@
-package lang.model;
+package com.iterlife.zeus.lang.model;
 
 import java.util.*;
 
