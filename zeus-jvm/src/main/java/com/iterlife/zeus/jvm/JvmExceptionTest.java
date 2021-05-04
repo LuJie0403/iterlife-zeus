@@ -9,20 +9,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class JvmException {
+public class JvmExceptionTest {
 
     public static void main(String[] args) {
         /**
-        -Xms32m
-        -Xmx64m
-        -Xss16m
-        -XX:PermSize=4m
-        -XX:MaxPermSize=8m
-        -XX:MetaspaceSize=1m
-        -XX:MaxMetaspaceSize=8m
-        -XX:+HeapDumpOnOutOfMemoryError
-        -XX:HeapDumpPath=G:\IterLife_Java1.8.x_WorkSpace\zeus\dump\hprof\gc.hprof
-        */
+         -Xms32m
+         -Xmx64m
+         -Xss16m
+         -XX:PermSize=4m
+         -XX:MaxPermSize=8m
+         -XX:MetaspaceSize=1m
+         -XX:MaxMetaspaceSize=8m
+         -XX:+HeapDumpOnOutOfMemoryError
+         -XX:HeapDumpPath=G:\IterLife_Java1.8.x_WorkSpace\zeus\dump\hprof\gc.hprof
+         */
         testHeapOOM();
         testStackSOF();
         testRuntimeConstantPoolOOM();
