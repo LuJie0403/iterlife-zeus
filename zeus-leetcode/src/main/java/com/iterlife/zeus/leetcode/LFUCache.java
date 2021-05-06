@@ -13,27 +13,22 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 public class LFUCache {
     public static void main(String[] args) throws InterruptedException {
-        LFUCache cache = new LFUCache(2);
+        LFUCache cache = new LFUCache(3);
+
         cache.put(1, 1);
-        Thread.sleep(100);
-        cache.get(1);
-        Thread.sleep(100);
         cache.put(2, 2);
-        Thread.sleep(100);
-        cache.get(1);
-        Thread.sleep(100);
         cache.put(3, 3);
-        Thread.sleep(100);
-        cache.get(1);
-        Thread.sleep(100);
-        cache.get(1);
-        Thread.sleep(100);
-        cache.get(1);
-        Thread.sleep(100);
         cache.put(4, 4);
-        Thread.sleep(100);
-        cache.put(1, 5);
-        Thread.sleep(100);
+        cache.get(4);
+        cache.get(3);
+        cache.get(2);
+        cache.get(1);
+        cache.put(5, 5);
+        cache.get(1);
+        cache.get(2);
+        cache.get(3);
+        cache.get(4);
+        cache.get(5);
     }
 
     private final Cache cache;
@@ -51,10 +46,11 @@ public class LFUCache {
         return node.getValue();
     }
 
-    public void put(int key, int value) {
+    public Object put(int key, int value) {
         Node node = new Node(key, value, 1);
         this.cache.putIfAbsent(node);
         this.cache.info("put(" + key + "," + value + ")");
+        return null;
     }
 
 }
@@ -79,6 +75,9 @@ class Cache {
 
     public Node getOrDefault(int key, Node defaultNode) {
         String refKey = String.valueOf(key);
+        if (cacheMap.isEmpty()) {
+            return defaultNode;
+        }
         Node node = cacheMap.get(refKey);
         if (node != null) {
             putIfAbsent(node);
@@ -88,12 +87,18 @@ class Cache {
 
     private Node find(int key) {
         String refKey = String.valueOf(key);
+        if (cacheMap.isEmpty()) {
+            return null;
+        }
         Node node = cacheMap.get(refKey);
         return node;
     }
 
     public void putIfAbsent(Node node) {
         Node tNode = find(node.getKey());
+        if (cacheMap.isEmpty() && capacity == 0) {
+            return;
+        }
         if (tNode != null) {
             cacheMap.remove(String.valueOf(node.getKey()));
             putIfAbsent(new Node(tNode.getKey(), node.getValue(), tNode.getUsedCnt().addAndGet(1)));
@@ -114,11 +119,11 @@ class Cache {
                 return 1;
             }
             if (o1.getUsedCnt().get() == o2.getUsedCnt().get()) {
-                if (o1.getUsedTime().get() < o2.getUsedTime().get()) {
-                    return 1;
+                if (o1.getUsedTime().get() <= o2.getUsedTime().get()) {
+                    return -1;
                 }
                 if (o1.getUsedTime().get() > o2.getUsedTime().get()) {
-                    return -1;
+                    return 1;
                 }
                 if (o1.getUsedTime().get() == o2.getUsedTime().get()) {
                     return 0;
@@ -144,12 +149,12 @@ class Node {
         this.key = key;
         this.value = value;
         this.usedCnt = new AtomicInteger(usedCnt);
-        this.usedTime = new AtomicLong(System.currentTimeMillis());
+        this.usedTime = new AtomicLong(System.nanoTime());
     }
 
     public Node update() {
         this.usedCnt = new AtomicInteger(this.usedCnt.addAndGet(1));
-        this.usedTime = new AtomicLong(System.currentTimeMillis());
+        this.usedTime = new AtomicLong(System.nanoTime());
         return this;
     }
 
