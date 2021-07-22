@@ -173,7 +173,7 @@
                 <snapshotRepository>
                     <id>nexus</id>
                     <name>nexus</name>
-                    <url>http://registry.caijj.net/repository/service-repo-develops/</url>
+                    <url>http://registry.xxx.net/repository/service-repo-develops/</url>
                 </snapshotRepository>
             </distributionManagement>
         </profile>
