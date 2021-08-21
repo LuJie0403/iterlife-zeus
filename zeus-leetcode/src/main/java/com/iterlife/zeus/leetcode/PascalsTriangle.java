@@ -11,8 +11,8 @@ import java.util.List;
  **/
 public class PascalsTriangle {
     public static void main(String args[]) {
-        System.out.println(new PascalsTriangleSolution().generate1(5));
-        System.out.println(new PascalsTriangleSolution().generate2(5));
+        System.out.println(new PascalsTriangleSolution().generate1(3));
+        System.out.println(new PascalsTriangleSolution().generate2(1));
     }
 }
 
