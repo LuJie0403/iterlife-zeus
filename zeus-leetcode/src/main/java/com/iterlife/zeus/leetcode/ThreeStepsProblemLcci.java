@@ -6,7 +6,7 @@ package com.iterlife.zeus.leetcode;
  * @version: V1.0.0
  * @datetime: 2021/8/21 23:14
  **/
-public class ThreeStepsProblemIcci {
+public class ThreeStepsProblemLcci {
     public static void main(String args[]) {
         System.out.println(String.format("step[%s]=%s", 3, new ThreeStepsProblemIcciSolution().waysToStep(3)));
         System.out.println(String.format("step[%s]=%s", 4, new ThreeStepsProblemIcciSolution().waysToStep(4)));
