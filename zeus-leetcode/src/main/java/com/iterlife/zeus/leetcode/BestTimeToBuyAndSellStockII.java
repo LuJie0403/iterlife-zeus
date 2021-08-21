@@ -21,26 +21,10 @@ public class BestTimeToBuyAndSellStockII {
 class BestTimeToBuyAndSellStockIISolution {
 
     public int maxProfit(int[] prices) {
-        int[] priceFluctuations = calPriceFluctuation(prices);
-        return calMaxStockProfit(1, priceFluctuations);
-    }
-
-    private int[] calPriceFluctuation(int[] prices) {
-        int[] priceFluctuations = new int[prices.length];
-        for (int i = 0; i < prices.length; ++i) {
-            if (i == 0) {
-                priceFluctuations[i] = prices[i];
-            } else {
-                priceFluctuations[i] = prices[i] - prices[i - 1];
-            }
-        }
-        return priceFluctuations;
-    }
-
-    public int calMaxStockProfit(int index, int[] priceFluctuations) {
-        int totalProfit = 0;
-        for (int i = index; i < priceFluctuations.length; ++i) {
-            totalProfit += priceFluctuations[i] > 0 ? priceFluctuations[i] : 0;
+        int priceFluctuations, totalProfit = 0;
+        for (int i = 1; i < prices.length; ++i) {
+            priceFluctuations = prices[i] - prices[i - 1];
+            totalProfit += priceFluctuations > 0 ? priceFluctuations : 0;
         }
         return totalProfit;
     }
