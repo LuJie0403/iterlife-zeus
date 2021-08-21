@@ -11,6 +11,7 @@ public class ClimbingStairs {
         System.out.println(new ClimbingStairsSolution().climbStairs1(3) + " " + new ClimbingStairsSolution().climbStairs2(3));
         System.out.println(new ClimbingStairsSolution().climbStairs1(4) + " " + new ClimbingStairsSolution().climbStairs2(4));
         System.out.println(new ClimbingStairsSolution().climbStairs1(5) + " " + new ClimbingStairsSolution().climbStairs2(5));
+        System.out.println(new ClimbingStairsSolution().climbStairs1(7) + " " + new ClimbingStairsSolution().climbStairs2(7));
         System.out.println(new ClimbingStairsSolution().climbStairs1(10) + " " + new ClimbingStairsSolution().climbStairs2(10));
         System.out.println(new ClimbingStairsSolution().climbStairs1(33) + " " + new ClimbingStairsSolution().climbStairs2(33));
     }
