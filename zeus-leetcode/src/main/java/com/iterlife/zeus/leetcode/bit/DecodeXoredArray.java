@@ -1,4 +1,4 @@
-package com.iterlife.zeus.leetcode;
+package com.iterlife.zeus.leetcode.bit;
 
 /**
  * @desc:https://leetcode-cn.com/problems/decode-xored-array/
