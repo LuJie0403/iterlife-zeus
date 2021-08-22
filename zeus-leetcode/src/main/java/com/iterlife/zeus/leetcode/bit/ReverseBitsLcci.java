@@ -19,21 +19,20 @@ public class ReverseBitsLcci {
         System.out.println(String.format("[-5>>1] = %s,[-5/2] = %s", -5 >> 1, -5 / 2));
         System.out.println(String.format("[-5>>>1] = %s,[-5/2] = %s", -5 >>> 1, -5 / 2));
 
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", -1, new ReverseBitsLcciSolution().reverseBits(-1)));
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", -2, new ReverseBitsLcciSolution().reverseBits(-2)));
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", -3, new ReverseBitsLcciSolution().reverseBits(-3)));
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", -4, new ReverseBitsLcciSolution().reverseBits(-4)));
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", -10, new ReverseBitsLcciSolution().reverseBits(-10)));
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", -51, new ReverseBitsLcciSolution().reverseBits(-51)));
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", -440783016, new ReverseBitsLcciSolution().reverseBits(-440783016)));
-
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", 0, new ReverseBitsLcciSolution().reverseBits(0)));
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", 1, new ReverseBitsLcciSolution().reverseBits(1)));
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", 7, new ReverseBitsLcciSolution().reverseBits(7)));
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", 8, new ReverseBitsLcciSolution().reverseBits(8)));
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", 15, new ReverseBitsLcciSolution().reverseBits(15)));
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", 1775, new ReverseBitsLcciSolution().reverseBits(1775)));
-        System.out.println(String.format("\nnum=%s maxLength=%s\n", 440783016, new ReverseBitsLcciSolution().reverseBits(440783016)));
+        System.out.println(String.format("num=%s maxLength=%s", -1, new ReverseBitsLcciSolution().reverseBits(-1)));
+        System.out.println(String.format("num=%s maxLength=%s", -2, new ReverseBitsLcciSolution().reverseBits(-2)));
+        System.out.println(String.format("num=%s maxLength=%s", -3, new ReverseBitsLcciSolution().reverseBits(-3)));
+        System.out.println(String.format("num=%s maxLength=%s", -4, new ReverseBitsLcciSolution().reverseBits(-4)));
+        System.out.println(String.format("num=%s maxLength=%s", -10, new ReverseBitsLcciSolution().reverseBits(-10)));
+        System.out.println(String.format("num=%s maxLength=%s", -51, new ReverseBitsLcciSolution().reverseBits(-51)));
+        System.out.println(String.format("num=%s maxLength=%s", -440783016, new ReverseBitsLcciSolution().reverseBits(-440783016)));
+        System.out.println(String.format("num=%s maxLength=%s", 0, new ReverseBitsLcciSolution().reverseBits(0)));
+        System.out.println(String.format("num=%s maxLength=%s", 1, new ReverseBitsLcciSolution().reverseBits(1)));
+        System.out.println(String.format("num=%s maxLength=%s", 7, new ReverseBitsLcciSolution().reverseBits(7)));
+        System.out.println(String.format("num=%s maxLength=%s", 8, new ReverseBitsLcciSolution().reverseBits(8)));
+        System.out.println(String.format("num=%s maxLength=%s", 15, new ReverseBitsLcciSolution().reverseBits(15)));
+        System.out.println(String.format("num=%s maxLength=%s", 1775, new ReverseBitsLcciSolution().reverseBits(1775)));
+        System.out.println(String.format("num=%s maxLength=%s", 440783016, new ReverseBitsLcciSolution().reverseBits(440783016)));
     }
 }
 
