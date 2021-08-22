@@ -1,4 +1,4 @@
-package com.iterlife.zeus.leetcode;
+package com.iterlife.zeus.leetcode.dp;
 
 /**
  * @desc:https://leetcode-cn.com/problems/house-robber/
