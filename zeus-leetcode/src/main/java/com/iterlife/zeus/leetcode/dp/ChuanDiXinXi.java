@@ -11,12 +11,12 @@ public class ChuanDiXinXi {
 
     public static void main(String args[]) {
         int[][] relation = new int[][]{{0, 2}, {2, 1}, {3, 4}, {2, 3}, {1, 4}, {2, 0}, {0, 4}};
-        System.out.println(new ChuanDiXinXiSolution().numWays(5, relation, 3));
+        System.out.println(new ChuanDiXinXiSolution().numWays1(5, relation, 3));
     }
 }
 
 class ChuanDiXinXiSolution {
-    public int numWays(int n, int[][] relation, int k) {
+    public int numWays1(int n, int[][] relation, int k) {
 
         printMap(n, relation);
 
