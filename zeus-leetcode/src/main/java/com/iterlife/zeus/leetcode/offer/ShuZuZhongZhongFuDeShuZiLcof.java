@@ -1,5 +1,7 @@
 package com.iterlife.zeus.leetcode.offer;
 
+import java.util.Arrays;
+
 /**
  * @desc:https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/
  * @author: lujie
@@ -9,7 +11,7 @@ package com.iterlife.zeus.leetcode.offer;
 public class ShuZuZhongZhongFuDeShuZiLcof {
     public static void main(String args[]) {
         int nums[] = new int[]{2, 3, 1, 0, 2, 5, 3};
-        System.out.println(new ShuZuZhongZhongFuDeShuZiLcofSolution().findRepeatNumber(nums));
+        System.out.println(new ShuZuZhongZhongFuDeShuZiLcofSolution().findRepeatNumber1(nums));
     }
 }
 
@@ -18,7 +20,7 @@ class ShuZuZhongZhongFuDeShuZiLcofSolution {
     /**
      * 时间优先算法
      */
-    public int findRepeatNumber(int[] nums) {
+    public int findRepeatNumber1(int[] nums) {
         int[] counter = new int[nums.length];
         for (int i = 0; i < nums.length; ++i) {
             counter[nums[i]]++;
@@ -26,6 +28,21 @@ class ShuZuZhongZhongFuDeShuZiLcofSolution {
                 return nums[i];
             }
         }
-        return 0;
+        return -1;
+    }
+
+
+    /**
+     * 空间优先算法
+     */
+    public int findRepeatNumber2(int[] nums) {
+        int result = 0;
+        nums = Arrays.stream(nums).sorted().toArray();
+        for (int i = 1; i < nums.length; ++i) {
+            if (nums[i] == nums[i - 1]) {
+                return nums[i];
+            }
+        }
+        return -1;
     }
 }
