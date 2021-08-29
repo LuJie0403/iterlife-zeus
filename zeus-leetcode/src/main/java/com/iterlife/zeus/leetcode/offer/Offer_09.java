@@ -1,4 +1,4 @@
-package com.iterlife.zeus.leetcode.offer1;
+package com.iterlife.zeus.leetcode.offer;
 
 import java.util.LinkedList;
 
@@ -8,7 +8,7 @@ import java.util.LinkedList;
  * @version: V1.0.0
  * @datetime: 2021/8/25 23:48
  **/
-public class YongLiangGeZhanShiXianDuiLieLcof {
+public class Offer_09 {
     public static void main(String args[]) {
         LinkedList<Integer> stack = new LinkedList<>();
         stack.add(1);

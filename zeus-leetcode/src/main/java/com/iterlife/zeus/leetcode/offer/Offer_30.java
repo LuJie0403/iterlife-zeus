@@ -1,4 +1,4 @@
-package com.iterlife.zeus.leetcode.offer1;
+package com.iterlife.zeus.leetcode.offer;
 
 /**
  * @desc:https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/
@@ -6,7 +6,7 @@ package com.iterlife.zeus.leetcode.offer1;
  * @version: V1.0.0
  * @datetime: 2021/8/23 22:31
  **/
-public class BaoHanMinHanShuDeZhanLcof {
+public class Offer_30 {
     public static void main(String args[]) {
 
 

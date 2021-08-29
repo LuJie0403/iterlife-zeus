@@ -1,4 +1,4 @@
-package com.iterlife.zeus.leetcode.offer1;
+package com.iterlife.zeus.leetcode.offer;
 
 import java.util.Arrays;
 
@@ -8,15 +8,15 @@ import java.util.Arrays;
  * @version: V1.0.0
  * @datetime: 2021/8/25 23:08
  **/
-public class ShuZuZhongZhongFuDeShuZiLcof {
+public class Offer_03 {
     public static void main(String args[]) {
         int nums[] = new int[]{2, 3, 1, 0, 2, 5, 3};
-        System.out.println(new ShuZuZhongZhongFuDeShuZiLcofSolution().findRepeatNumber1(nums));
+        System.out.println(new Offer_03_Solution().findRepeatNumber1(nums));
     }
 }
 
 
-class ShuZuZhongZhongFuDeShuZiLcofSolution {
+class Offer_03_Solution {
     /**
      * 时间优先算法
      */

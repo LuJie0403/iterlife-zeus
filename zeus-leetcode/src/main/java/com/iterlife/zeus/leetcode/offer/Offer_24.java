@@ -1,4 +1,4 @@
-package com.iterlife.zeus.leetcode.offer1;
+package com.iterlife.zeus.leetcode.offer;
 
 /**
  * @desc:https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof
@@ -6,12 +6,12 @@ package com.iterlife.zeus.leetcode.offer1;
  * @version: V1.0.0
  * @datetime: 2021/8/25 00:12
  **/
-public class FanZhuanLianBiaoLcof {
+public class Offer_24 {
     public static void main(String agrs[]) {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
 
-        new FanZhuanLianBiaoLcofSolution().reverseList(head);
+        new Offer_24_Solution().reverseList(head);
     }
 }
 
@@ -30,7 +30,7 @@ class ListNode {
 }
 
 
-class FanZhuanLianBiaoLcofSolution {
+class Offer_24_Solution {
 
 
     public ListNode reverseList(ListNode head) {
