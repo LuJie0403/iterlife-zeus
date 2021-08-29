@@ -6,14 +6,14 @@ package com.iterlife.zeus.leetcode.offer;
  * @version: V1.0.0
  * @datetime: 2021/8/21 22:12
  **/
-public class GzCJIP {
+public class Offer_II_088 {
     public static void main(String args[]) {
         int[] cost1 = new int[]{10, 15, 20};
-        System.out.println(new GzCJIPSolution().minCostClimbingStairs(cost1));
+        System.out.println(new Offer_II_088_Solution().minCostClimbingStairs(cost1));
     }
 }
 
-class GzCJIPSolution {
+class Offer_II_088_Solution {
     public int minCostClimbingStairs(int[] cost) {
         int pre1StairCost = 0, pre2StairCost = 0, minCost = 0;
         if (cost.length < 2) {

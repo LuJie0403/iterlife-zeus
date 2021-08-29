@@ -6,7 +6,7 @@ package com.iterlife.zeus.leetcode.offer;
  * @version: V1.0.0
  * @datetime: 2021/8/23 22:31
  **/
-public class BaoHanMinHanShuDeZhanLcof {
+public class Offer_30 {
     public static void main(String args[]) {
 
 

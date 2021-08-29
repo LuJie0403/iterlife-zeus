@@ -6,10 +6,10 @@ package com.iterlife.zeus.leetcode.offer;
  * @version: V1.0.0
  * @datetime: 2021/8/22 15:49
  **/
-public class NUPfPr {
+public class Offer_II_101 {
 }
 
-class NUPfPrSolution {
+class Offer_II_101_Solution {
     public boolean canPartition(int[] nums) {
         int sum = 0;
         if (nums.length <= 1) {

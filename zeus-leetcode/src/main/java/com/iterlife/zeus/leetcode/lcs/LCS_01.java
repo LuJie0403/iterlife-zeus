@@ -1,15 +1,15 @@
-package com.iterlife.zeus.leetcode.offer;
+package com.iterlife.zeus.leetcode.lcs;
 
 /**
- * @desc:
+ * @desc:https://leetcode-cn.com/problems/Ju9Xwi/
  * @author: lujie
  * @version: V1.0.0
  * @datetime: 2021/8/22 17:12
  **/
-public class Ju9Xwi {
+public class LCS_01 {
 }
 
-class Ju9XwiSolution {
+class LCS_01_Solution {
     public int leastMinutes(int n) {
         int result = 0, ant = 1;
         while (ant <= n) {

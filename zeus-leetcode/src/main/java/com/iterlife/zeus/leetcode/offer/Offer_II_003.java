@@ -6,15 +6,15 @@ package com.iterlife.zeus.leetcode.offer;
  * @version: V1.0.0
  * @datetime: 2021/8/21 21:42
  **/
-public class W3tCBm {
+public class Offer_II_003 {
     public static void main(String args[]) {
-        new W3tCBmSolution().countBits(0);
-        // new W3tCBmSolution().countBits(10);
+        new Offer_II_003_Solution().countBits(0);
+        // new Offer_II_003_Solution().countBits(10);
     }
 }
 
 
-class W3tCBmSolution {
+class Offer_II_003_Solution {
     public int[] countBits(int n) {
         int counter[] = new int[n + 1];
         counter[0] = 0;

@@ -6,11 +6,11 @@ package com.iterlife.zeus.leetcode.offer;
  * @version: V1.0.0
  * @datetime: 2021/8/24 23:40
  **/
-public class CongWeiDaoTouDaYinLianBiaoLcof {
+public class Offer_06 {
 }
 
 
-class CongWeiDaoTouDaYinLianBiaoLcofSolution {
+class Offer_06_Solution {
 
     /**
      * Definition for singly-linked list.
