@@ -9,7 +9,7 @@ package com.iterlife.zeus.leetcode.lcs;
 public class LCS_01 {
 }
 
-class Ju9XwiSolution {
+class LCS_01_Solution {
     public int leastMinutes(int n) {
         int result = 0, ant = 1;
         while (ant <= n) {
