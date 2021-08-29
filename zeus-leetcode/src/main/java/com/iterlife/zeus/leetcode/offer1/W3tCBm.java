@@ -1,4 +1,4 @@
-package com.iterlife.zeus.leetcode.offer;
+package com.iterlife.zeus.leetcode.offer1;
 
 /**
  * @desc:https://leetcode-cn.com/problems/w3tCBm/
