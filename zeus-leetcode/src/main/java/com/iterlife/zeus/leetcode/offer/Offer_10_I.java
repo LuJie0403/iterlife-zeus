@@ -1,7 +1,7 @@
 package com.iterlife.zeus.leetcode.offer;
 
 /**
- * @desc:
+ * @desc:https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/
  * @author: lujie
  * @version: V1.0.0
  * @datetime: 2021/8/30 23:45
