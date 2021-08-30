@@ -22,8 +22,10 @@ class Offer_04_Solution {
             return false;
         }
         int row = matrix.length, col = matrix[0].length;
+        int counter = 0;
         System.out.println(String.format("row=%s,col=%s", row, col));
         for (int i = 0, j = col - 1; i < row && j >= 0; ) {
+            System.out.println(String.format("第 %s 比较，matrix[%s][%s]=%s,target=%s", ++counter, i, j, matrix[i][j], target));
             if (matrix[i][j] > target) {
                 j--;
             } else if (matrix[i][j] < target) {
