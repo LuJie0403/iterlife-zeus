@@ -8,30 +8,24 @@ package com.iterlife.zeus.leetcode.offer;
  **/
 public class Offer_24 {
     public static void main(String agrs[]) {
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-
-        new Offer_24_Solution().reverseList(head);
-    }
-}
-
-
-/**
- * Definition for singly-linked list.
- */
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
     }
 }
 
 
 class Offer_24_Solution {
 
+    /**
+     * Definition for singly-linked list.
+     */
+
+    class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
 
     public ListNode reverseList(ListNode head) {
         ListNode current = head;
