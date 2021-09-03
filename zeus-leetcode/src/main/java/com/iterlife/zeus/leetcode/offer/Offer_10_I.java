@@ -4,12 +4,12 @@ package com.iterlife.zeus.leetcode.offer;
  * @desc:https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/
  * @author: lujie
  * @version: V1.0.0
- * @datetime: 2021/8/22 01:28
+ * @datetime: 2021/8/30 23:45
  **/
-public class Offer_10_1 {
+public class Offer_10_I {
 }
 
-class Offer_10_1_Solution {
+class Offer_10_I_Solution {
     public int fib(int n) {
         int pre2Num = 0, pre1Num = 1;
         int result = 0;
