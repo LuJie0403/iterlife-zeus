@@ -11,7 +11,8 @@ public class Offer_25 {
     public static void main(String args[]) {
         Offer_25_Solution.ListNode l1 = new Offer_25_Solution.ListNode(1, new Offer_25_Solution.ListNode(2, new Offer_25_Solution.ListNode(4, null)));
         Offer_25_Solution.ListNode l2 = new Offer_25_Solution.ListNode(1, new Offer_25_Solution.ListNode(3, new Offer_25_Solution.ListNode(4, null)));
-        new Offer_25_Solution().mergeTwoLists(l1, l2);
+        new Offer_25_Solution().mergeTwoLists1(l1, l2);
+        new Offer_25_Solution().mergeTwoLists2(l1, l2);
     }
 }
 
