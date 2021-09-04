@@ -24,8 +24,8 @@ class Offer_52_Solution {
         }
 
         /**
-         * 两个链表A和B相交，则 A+B 和 B+A 长度一致，如果分别遍历一遍，则最终他们将同时到达结束的位置
-         * 结束位置前的交叉点则是 A 和 B 相交的地方
+         * 两个链表 A 和 B 相交，则 A+B 和 B+A 长度一致，且两者的末位节点是共享的部分。
+         * 如分别遍历一遍 A+B 和 B+A，则最终将同时到达结束的位置，结束位置前的第一个共享节点就是 A 和 B 开始相交的地方
          */
         public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
             if (headA == null || headB == null) {
