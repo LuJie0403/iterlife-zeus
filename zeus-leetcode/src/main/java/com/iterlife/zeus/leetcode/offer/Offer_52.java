@@ -25,7 +25,6 @@ class Offer_52_Solution {
 
         /**
          * 两个链表A和B相交，则 A+B 和 B+A 长度一致，则分别遍历一遍，同时到达结尾的位置
-         * 如果 A 和 B 的长度差为 size,则分别循环反复遍历 A+B 和 B+A size 次数，可以同时变量到 A 和 B 相差的位置
          */
         public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
             if (headA == null || headB == null) {
