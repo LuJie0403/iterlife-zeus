@@ -33,15 +33,10 @@ class Offer_52_Solution {
             }
             ListNode pNodeA = headA;
             ListNode pNodeB = headB;
-            int counter = 0;
             while (pNodeA != pNodeB) {
                 pNodeA = (pNodeA == null ? headB : pNodeA.next);
                 pNodeB = (pNodeB == null ? headA : pNodeB.next);
-                counter++;
-                print(counter, "A", pNodeA);
-                print(counter, "B", pNodeB);
             }
-            System.out.println(String.format(" counter=%s", counter));
             return pNodeA;
         }
 
