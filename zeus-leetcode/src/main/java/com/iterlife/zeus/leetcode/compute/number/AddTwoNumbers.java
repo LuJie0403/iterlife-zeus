@@ -1,4 +1,4 @@
-package com.iterlife.zeus.leetcode.compute.gnum;
+package com.iterlife.zeus.leetcode.compute.number;
 
 /**
  * @author Lu Jie

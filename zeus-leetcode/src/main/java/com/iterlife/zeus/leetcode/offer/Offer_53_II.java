@@ -6,11 +6,11 @@ package com.iterlife.zeus.leetcode.offer;
  * @version: V1.0.0
  * @datetime: 2021/8/29 19:09
  **/
-public class Offer_53 {
+public class Offer_53_II {
 }
 
 
-class Offer_53_Solution {
+class Offer_53_II_Solution {
     public int missingNumber(int[] nums) {
         int i = 0;
         for (i = 0; i < nums.length; ++i) {
