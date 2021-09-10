@@ -13,6 +13,8 @@ public class Offer_03 {
         int nums[] = new int[]{2, 3, 1, 0, 2, 5, 3};
         System.out.println(new Offer_03_Solution().findRepeatNumber1(nums));
     }
+
+
 }
 
 
