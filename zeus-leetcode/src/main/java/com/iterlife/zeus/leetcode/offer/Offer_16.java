@@ -16,10 +16,19 @@ public class Offer_16 {
 
 class Offer_16_Solution {
     public double myPow(double x, int n) {
+        if (Math.abs(x) - 1d == 0) {
+            return n % 2 == 0 ? 1d : x;
+        }
+
+        if (n > Integer.MAX_VALUE || n <= Integer.MIN_VALUE) {
+            return 0d;
+        }
+        System.out.print(Integer.MIN_VALUE);
         if (n >= 0) {
             return myPowPositive(x, n);
         }
-        return 1 / myPowPositive(x, -n);
+        double ans = myPowPositive(x, -n);
+        return 1 / ans;
     }
 
     public double myPowPositive(double x, int n) {
