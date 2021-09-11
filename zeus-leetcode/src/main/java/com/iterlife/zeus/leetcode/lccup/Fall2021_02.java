@@ -11,23 +11,53 @@ import java.util.Arrays;
 public class Fall2021_02 {
 
     public static void main(String args[]) {
-        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 2, 2}, 3);
-        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 2, 2}, 2);
-        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 2, 2}, 4);
-        new Fall2021_02_Solution().maxmiumScore(new int[]{3, 3, 3}, 2);
-        new Fall2021_02_Solution().maxmiumScore(new int[]{3, 3, 1}, 1);
-        new Fall2021_02_Solution().maxmiumScore(new int[]{3,}, 1);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{}, 1);
         new Fall2021_02_Solution().maxmiumScore(new int[]{2}, 1);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{3}, 1);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 1}, 1);
         new Fall2021_02_Solution().maxmiumScore(new int[]{3, 1}, 1);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 2}, 1);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{3, 2}, 1);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 3}, 1);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 4}, 1);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 1, 2}, 1);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{4, 1, 4}, 1);
+
+        new Fall2021_02_Solution().maxmiumScore(new int[]{}, 2);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{2}, 2);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{3}, 2);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 1}, 2);
         new Fall2021_02_Solution().maxmiumScore(new int[]{3, 1}, 2);
-        new Fall2021_02_Solution().maxmiumScore(new int[]{4, 3}, 2);
-        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 4}, 1);
-        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 4}, 2);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 2}, 2);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{3, 2}, 2);
         new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 3}, 2);
-        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 8, 9}, 3);
-        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2}, 2);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 4}, 2);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 1, 2}, 2);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{4, 1, 4}, 2);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 3, 5, 7}, 2);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 4, 6, 8}, 2);
         new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 5, 4, 6, 3}, 2);
-        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 1, 3}, 2);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 3, 4, 5, 6, 7, 8}, 2);
+
+
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 3}, 3);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 4}, 3);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 1, 2}, 3);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 2, 2}, 3);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 8, 9}, 3);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 4, 6, 8}, 3);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 5, 4, 6, 3}, 3);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 3, 4, 5, 6, 7, 8}, 3);
+
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 3}, 4);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 4}, 4);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 1, 2}, 4);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{2, 2, 2}, 4);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 8, 9}, 4);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 5, 4, 6, 3}, 4);
+        new Fall2021_02_Solution().maxmiumScore(new int[]{1, 2, 5, 4, 6, 3}, 5);
+
+
     }
 }
 
@@ -43,24 +73,26 @@ class Fall2021_02_Solution {
         }
 
         int[] sortedArray = Arrays.stream(cards).sorted().toArray();
-        if (cnt == 0 || cards.length == 0) {
+        if (cnt == 0 || cards.length == 0 || cnt < cards.length) {
             return 0;
         }
         int[][] locations = findNumberLocation(sortedArray);
-        int result = 0;
-        if (cnt == 1) {
-            result += locations[0][1] == -1 ? 0 : cards[locations[0][1]];
-        }
+        int[] result = new int[cnt + 1];
+        result[0] = 0;
+        result[1] = locations[0][1] == -1 ? 0 : sortedArray[locations[0][1]];
 
         for (int counter = 2; counter <= cnt; ++counter) {
             int evenResult = 0, oddResult = 0;
             locations = findNumberLocation(sortedArray);
-            evenResult = locations[0][0] == -1 || locations[0][1] == -1 ?
-                    0 : evenResult + (sortedArray[locations[0][0]] + sortedArray[locations[0][1]]);
-            oddResult = locations[1][1] == -1 || locations[1][0] == -1 ?
-                    0 : oddResult + (sortedArray[locations[1][0]] + sortedArray[locations[1][1]]);
+            evenResult = locations[0][0] == -1 || locations[0][1] == -1 ? 0 : sortedArray[locations[0][0]] + sortedArray[locations[0][1]];
+            oddResult = locations[1][1] == -1 || locations[1][0] == -1 ? 0 : sortedArray[locations[1][0]] + sortedArray[locations[1][1]];
 
-            result = (oddResult >= evenResult) ? oddResult : evenResult;
+            if (counter % 2 == 1) {
+                result[counter] += evenResult;
+            } else {
+                result[counter] = (oddResult >= evenResult ? oddResult : evenResult);
+            }
+
             if (oddResult >= evenResult && locations[1][0] != -1 && locations[1][1] != -1) {
                 sortedArray[locations[1][0]] = 0;
                 sortedArray[locations[1][1]] = oddResult;
@@ -70,11 +102,10 @@ class Fall2021_02_Solution {
                 sortedArray[locations[0][0]] = 0;
                 sortedArray[locations[0][1]] = evenResult;
             }
-            //     Arrays.stream(sortedArray).forEach(System.out::println);
         }
-        System.out.println(String.format("Array=%s, cnt=%d, result=%d", sb.append("]").toString(), cnt, result));
+        System.out.println(String.format("Array=%s, cnt=%d, result=%d", sb.append("]").toString(), cnt, result[cnt]));
 
-        return result;
+        return result[cnt];
     }
 
     /**
