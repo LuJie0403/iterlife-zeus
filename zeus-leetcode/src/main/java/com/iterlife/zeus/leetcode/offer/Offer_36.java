@@ -35,6 +35,9 @@ class Offer_36_Solution {
         }
     }
 
+    /**
+     * 指针处理
+     */
     public Node treeToDoublyList(Node root) {
         if (root == null) {
             return null;
@@ -50,6 +53,9 @@ class Offer_36_Solution {
         return head;
     }
 
+    /**
+     * 中序遍历
+     */
     public void inorderTraverse(Node node, List<Node> ansList) {
         if (node == null) {
             return;
