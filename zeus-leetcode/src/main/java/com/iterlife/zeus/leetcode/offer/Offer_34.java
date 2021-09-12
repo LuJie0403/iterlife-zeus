@@ -46,17 +46,19 @@ class Offer_34_Solution {
         return ansList;
     }
 
-    public void dfs(TreeNode root, int target, List<Integer> resList) {
+    public void dfs(TreeNode root, int target, List<Integer> tempList) {
         if (root == null) {
             return;
         }
         target -= root.val;
-        resList.add(root.val);
+        tempList.add(root.val);
         if (target == 0 && root.left == null && root.right == null) {
-            ansList.add(new ArrayList<>(resList));
+            //tempList 是存储遍历过的临时路径，所以当满足条件的时候要把临时复制一份作为最终结果输出
+            ansList.add(new ArrayList<>(tempList));
         }
-        dfs(root.left, target, resList);
-        dfs(root.right, target, resList);
-        resList.remove(resList.size() - 1);
+        dfs(root.left, target, tempList);
+        dfs(root.right, target, tempList);
+        // 检索到此处说明没有满足条件的路径，则后一步继续检索另一个子树（先进后出）
+        tempList.remove(tempList.size() - 1);
     }
 }
