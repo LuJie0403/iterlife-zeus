@@ -6,11 +6,11 @@ package com.iterlife.zeus.leetcode.offer;
  * @version: V1.0.0
  * @datetime: 2021/9/12 19:59
  **/
-public class offer_26 {
+public class Offer_26 {
 }
 
 
-class offer_26_Solution {
+class Offer_26_Solution {
     /**
      * Definition for a binary tree node.
      */

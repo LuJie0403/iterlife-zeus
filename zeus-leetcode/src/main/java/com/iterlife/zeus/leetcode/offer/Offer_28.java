@@ -1,7 +1,7 @@
 package com.iterlife.zeus.leetcode.offer;
 
 /**
- * @desc:
+ * @desc:https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/
  * @author: lujie
  * @version: V1.0.0
  * @datetime: 2021/9/12 19:27
@@ -9,7 +9,7 @@ package com.iterlife.zeus.leetcode.offer;
 public class Offer_28 {
 }
 
-class Solution {
+class Offer_28_Solution {
 
     /**
      * Definition for a binary tree node.
@@ -28,12 +28,32 @@ class Solution {
         if (root == null) {
             return true;
         }
-        if (root.left != null && root.right != null) {
-            if (root.left.val == root.right.val) {
-                return isSymmetric(root.left) && isSymmetric(root.right);
-            }
-            return false;
+        TreeNode mirrorTree = mirrorTreeNode(root);
+
+        return isEqualTree(root, mirrorTree);
+    }
+
+    public TreeNode mirrorTreeNode(TreeNode treeNode) {
+        if (treeNode == null) {
+            return null;
+        }
+        TreeNode mirrorTree = new TreeNode(treeNode.val);
+        TreeNode tTreeNode = treeNode.left;
+        mirrorTree.left = mirrorTreeNode(treeNode.right);
+        mirrorTree.right = mirrorTreeNode(tTreeNode);
+        return mirrorTree;
+    }
+
+
+    public boolean isEqualTree(TreeNode aTree, TreeNode bTree) {
+        if (aTree == null || bTree == null) {
+            return bTree == null;
+        }
+        if (aTree.val == bTree.val && isEqualTree(aTree.left, bTree.left) && isEqualTree(aTree.right, bTree.right)) {
+            return true;
         }
         return false;
     }
+
+
 }
