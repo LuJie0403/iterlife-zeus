@@ -9,9 +9,9 @@ package com.iterlife.zeus.leetcode.offer;
 public class Offer_13 {
 
     public static void main(String args[]) {
-        //  int counter1 = new Offer_13_Solution().movingCount(2, 3, 1);
-        new Offer_13_Solution().outOfBound(0, 1, 17);
-        int counter2 = new Offer_13_Solution().movingCount(3, 2, 17);
+        //     System.out.println(new Offer_13_Solution().movingCount(2, 3, 1));
+        //     System.out.println(new Offer_13_Solution().movingCount(3, 2, 17));
+        System.out.println(new Offer_13_Solution().movingCount(11, 8, 18));
     }
 }
 
@@ -68,10 +68,9 @@ class Offer_13_Solution {
             if (k < 0) {
                 return k;
             }
+            n -= n % 10;
             if (n >= 10) {
-                n -= (n % 10) / 10;
-            } else {
-                n = 0;
+                n /= 10;
             }
         }
         return k;
