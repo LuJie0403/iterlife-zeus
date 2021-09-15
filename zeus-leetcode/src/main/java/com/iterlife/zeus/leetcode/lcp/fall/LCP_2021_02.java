@@ -1,76 +1,75 @@
-package com.iterlife.zeus.leetcode.lcp;
+package com.iterlife.zeus.leetcode.lcp.fall;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.stream.IntStream;
 
 /**
- * @desc:
- * https://leetcode-cn.com/contest/season/2021-fall/problems/uOAnQW/
+ * @desc: https://leetcode-cn.com/contest/season/2021-fall/problems/uOAnQW/
  * https://leetcode-cn.com/problems/uOAnQW/
  * @author: lujie
  * @version: V1.0.0
  * @datetime: 2021/9/11 17:41
  **/
-public class Fall2021_LCP_02 {
+public class LCP_2021_02 {
 
     public static void main(String args[]) {
 
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 3}, 1));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{3, 1}, 2));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2, 1}, 2));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 3}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 3}, 1));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{3, 1}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2, 1}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 3}, 2));
 
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{3, 3, 1}, 1));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 8, 9}, 3));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{}, 1));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2}, 1));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{3}, 1));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2, 1}, 1));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{3, 1}, 1));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2, 2}, 1));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{3, 2}, 1));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{3, 3, 1}, 1));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 8, 9}, 3));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{}, 1));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2}, 1));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{3}, 1));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2, 1}, 1));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{3, 1}, 1));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2, 2}, 1));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{3, 2}, 1));
 
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 4}, 1));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2, 1, 2}, 1));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{4, 1, 4}, 1));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 4}, 1));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2, 1, 2}, 1));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{4, 1, 4}, 1));
 
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{}, 2));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2}, 2));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{3}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{3}, 2));
 
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2, 2}, 2));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{3, 2}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2, 2}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{3, 2}, 2));
 
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 4}, 2));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2, 1, 2}, 2));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{4, 1, 4}, 2));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 3, 5, 7}, 2));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2, 4, 6, 8}, 2));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 5, 4, 6, 3}, 2));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 3, 4, 5, 6, 7, 8}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 4}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2, 1, 2}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{4, 1, 4}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 3, 5, 7}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2, 4, 6, 8}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 5, 4, 6, 3}, 2));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 3, 4, 5, 6, 7, 8}, 2));
 
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 3}, 3));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 4}, 3));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2, 1, 2}, 3));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2, 2, 2}, 3));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 8, 9}, 3));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2, 4, 6, 8}, 3));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 5, 4, 6, 3}, 3));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 3, 4, 5, 6, 7, 8}, 3));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 3}, 3));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 4}, 3));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2, 1, 2}, 3));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2, 2, 2}, 3));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 8, 9}, 3));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2, 4, 6, 8}, 3));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 5, 4, 6, 3}, 3));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 3, 4, 5, 6, 7, 8}, 3));
 
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 3}, 4));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 4}, 4));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2, 1, 2}, 4));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{2, 2, 2}, 4));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 8, 9}, 4));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 5, 4, 6, 3}, 4));
-        System.out.println(new Fall2021_LCP_02_Solution().maxmiumScore3(new int[]{1, 2, 5, 4, 6, 3}, 5));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 3}, 4));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 4}, 4));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2, 1, 2}, 4));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{2, 2, 2}, 4));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 8, 9}, 4));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 5, 4, 6, 3}, 4));
+        System.out.println(new LCP_2021_02_Solution().maxmiumScore3(new int[]{1, 2, 5, 4, 6, 3}, 5));
     }
 }
 
 
-class Fall2021_LCP_02_Solution {
+class LCP_2021_02_Solution {
     /**
      * 动态规划问题
      */
