@@ -11,7 +11,7 @@ import java.util.List;
  **/
 public class Offer_57_II {
     public static void main(String args[]) {
-        new Offer_57_II_Solution().findContinuousSequence(9);
+        new Offer_57_II_Solution().findContinuousSequence2(9);
     }
 }
 
@@ -30,7 +30,7 @@ class Offer_57_II_Solution {
         }
     }
 
-    public int[][] findContinuousSequence(int target) {
+    public int[][] findContinuousSequence1(int target) {
         List<Node> result = new ArrayList<Node>();
         if (target <= 2) {
             return new int[][]{};
@@ -61,5 +61,29 @@ class Offer_57_II_Solution {
             }
         }
         return ans;
+    }
+
+
+    public int[][] findContinuousSequence2(int target) {
+        List<int[]> result = new ArrayList<int[]>();
+        int start = 1, end = 1;
+        int ans = 0;
+        while (start <= target / 2 + 1) {
+            if (ans < target) {
+                ans += end++;
+            }
+            if (ans > target) {
+                ans -= start++;
+            }
+            if (ans == target) {
+                int[] temp = new int[end - start];
+                for (int k = start; k < end; ++k) {
+                    temp[k - start] = k;
+                }
+                result.add(temp);
+                ans -= start++;
+            }
+        }
+        return result.toArray(new int[result.size()][]);
     }
 }
