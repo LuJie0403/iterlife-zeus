@@ -7,6 +7,10 @@ package com.iterlife.zeus.leetcode.offer;
  * @datetime: 2021/9/21 17:44
  **/
 public class Offer_14_II {
+    public static void main(String args[]) {
+        System.out.println(new Offer_14_II_Solution().cuttingRope(120));
+        System.out.println(new Offer_14_II_Solution().cuttingRope(127));
+    }
 }
 
 
