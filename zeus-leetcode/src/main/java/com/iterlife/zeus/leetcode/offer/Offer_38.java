@@ -38,17 +38,19 @@ class Offer_38_Solution {
         for (int i = pos; i < charArray.length; ++i) {
             if (!usedCharSet.contains(charArray[i])) {
                 usedCharSet.add(charArray[i]);
+                // i 和 pos 更换位置后依次深度遍历进行排列
                 swap(i, pos);
                 dfs(pos + 1);
+                // 前一个字符遍历排列结束以后回溯到上一个位置
                 swap(i, pos);
             }
         }
     }
 
     private void swap(int i, int j) {
-        char tmp = charArray[i];
+        char temp = charArray[i];
         charArray[i] = charArray[j];
-        charArray[j] = tmp;
+        charArray[j] = temp;
         System.out.println(String.format("charArray[%d] =%s,charArray[%d]=%s,str=%s", i, charArray[i], j, charArray[j], String.valueOf(charArray)));
     }
 }
