@@ -1,4 +1,4 @@
-package com.iterlife.zeus.leetcode.dp;
+package com.iterlife.zeus.leetcode.lcp;
 
 /**
  * @desc:https://leetcode-cn.com/problems/chuan-di-xin-xi/
@@ -6,17 +6,17 @@ package com.iterlife.zeus.leetcode.dp;
  * @version: V1.0.0
  * @datetime: 2021/8/22 17:33
  **/
-public class ChuanDiXinXi {
+public class LCP_07 {
 
 
     public static void main(String args[]) {
         int[][] relation = new int[][]{{0, 2}, {2, 1}, {3, 4}, {2, 3}, {1, 4}, {2, 0}, {0, 4}};
-        System.out.println(new ChuanDiXinXiSolution().numWays1(5, relation, 3));
-        System.out.println(new ChuanDiXinXiSolution().numWays2(5, relation, 3));
+        System.out.println(new LCP_07_Solution().numWays1(5, relation, 3));
+        System.out.println(new LCP_07_Solution().numWays2(5, relation, 3));
     }
 }
 
-class ChuanDiXinXiSolution {
+class LCP_07_Solution {
     public int numWays1(int n, int[][] relation, int k) {
         //dp[i][j]表示第j轮传递到编号为i的小朋友的总方案数
         //dp[i][j]+=dp[i][j-1]
