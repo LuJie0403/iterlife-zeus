@@ -55,6 +55,7 @@ class Offer_19_Solution {
      * 逐位检查字符串 s.charAt[i] 与 p.charAt[j] 是否匹配
      */
     public boolean matchText(String s, String p, int i, int j) {
+        //两个字符串同时到底端尾，说明可以匹配
         if (i == s.length() && j == p.length()) {
             return true;
         }
