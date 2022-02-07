@@ -14,17 +14,17 @@ public class Main {
 
     public static void main(String args[]) {
         //全量计算所有测试数据
-        calcAllMileage();
+        calcTQI4AllMileage();
 
         //区间计算所有测试数据
-        calcSectionMileage();
+        calcTQIByPartitionMileage();
 
     }
 
     /**
      * 区间计算所有测试数据
      */
-    private static void calcSectionMileage() {
+    private static void calcTQIByPartitionMileage() {
         try {
             FileReader fileReader = new FileReader("../iterlife-zeus/zeus-tqi/src/main/resources/input.txt");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -49,7 +49,7 @@ public class Main {
     /**
      * 全量计算所有测试数据
      */
-    private static void calcAllMileage() {
+    private static void calcTQI4AllMileage() {
         //初始化结构化数据存储器
         XData xData = new XData(DATA_ITEM_SIZE);
 
