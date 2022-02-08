@@ -17,10 +17,17 @@ import lombok.ToString;
 @AllArgsConstructor
 public class XElem {
 
-    public int index;
+    //XDate内部偏移量(从0开始计数)
+    public int offset;
+
+    //测量值
     public double value;
+    // 平均值
     public double avgValue;
+
+    // 累加和（当前值/后值）
     public double sumValue;
+    // 累加和（前值）
     public double preSumValue;
 
     // 平方差（当前值）
@@ -29,7 +36,7 @@ public class XElem {
     public double accumulatedSdamValue;
 
     public XElem(int counter, double value, double preSumValue, double accumulatedSdamValue) {
-        this.index = counter;
+        this.offset = counter;
 
         this.value = value;
         this.preSumValue = preSumValue;
