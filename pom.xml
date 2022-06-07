@@ -26,7 +26,7 @@
         <jar.name>${artifactId}-${version}</jar.name>
         <context.name>iterlife-spring-boot-home</context.name>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.framework.version>2.1.14.RELEASE</spring.framework.version>
+        <spring.framework.version>2.5.12</spring.framework.version>
         <spring.web.version>5.1.15.RELEASE</spring.web.version>
         <okhttp.version>3.14.3</okhttp.version>
     </properties>
