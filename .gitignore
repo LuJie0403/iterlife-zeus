@@ -3,13 +3,8 @@ dump/
 .project
 .settings/
 target/
+
 phoneoutput-*.txt
-zeus.iml
+*.iml
 .idea/*
-zeus-demo/zeus-demo.iml
-zeus-lang/zeus-lang.iml
-zeus-leetcode/zeus-leetcode.iml
-zeus-osf/zeus-osf.iml
-zeus-spring/zeus-spring.iml
-zeus-starter/zeus-start.iml
-iterlife-zeus.iml
+
