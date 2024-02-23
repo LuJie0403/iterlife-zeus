@@ -26,7 +26,7 @@
         <context.name>iterlife-spring-boot-home</context.name>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.framework.version>2.5.15</spring.framework.version>
-        <spring.web.version>6.0.0</spring.web.version>
+        <spring.web.version>6.0.17</spring.web.version>
         <okhttp.version>3.14.3</okhttp.version>
     </properties>
 
