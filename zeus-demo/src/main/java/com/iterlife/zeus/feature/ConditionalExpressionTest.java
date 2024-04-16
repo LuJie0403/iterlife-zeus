@@ -1,4 +1,4 @@
-package com.iterlife.zeus.lang.feature;
+package com.iterlife.zeus.feature;
 import org.apache.commons.lang3.ObjectUtils;
 import java.util.HashMap;
 import java.util.Map;

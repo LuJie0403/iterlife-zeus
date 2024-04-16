@@ -1,6 +1,6 @@
 package com.iterlife.zeus.demo.factory;
 
-import com.iterlife.spring.boot.demo.bean.User;
+import com.iterlife.zeus.demo.entity.User2;
 import org.springframework.beans.factory.FactoryBean;
 
 /**
@@ -12,13 +12,13 @@ import org.springframework.beans.factory.FactoryBean;
 public class UserFactoryBean implements FactoryBean {
 
 
-    private User userObj;
+    private User2 userObj;
     private String userStr;
 
 
     @Override
     public Object getObject() throws Exception {
-        User userObj2 = new User();
+        User2 userObj2 = new User2();
         String[] userDetail = this.userStr.split(";");
         userObj2.setId(userDetail[0]);
         userObj2.setName(userDetail[1]);
@@ -37,7 +37,7 @@ public class UserFactoryBean implements FactoryBean {
         return false;
     }
 
-    public void setUserObj(User userObj) {
+    public void setUserObj(User2 userObj) {
         this.userObj = userObj;
     }
 
@@ -47,9 +47,6 @@ public class UserFactoryBean implements FactoryBean {
 
     @Override
     public String toString() {
-        return "UserFactoryBean{" +
-                "userObj=" + userObj +
-                ", userStr='" + userStr + '\'' +
-                '}';
+        return "UserFactoryBean{" + "userObj=" + userObj + ", userStr='" + userStr + '\'' + '}';
     }
 }

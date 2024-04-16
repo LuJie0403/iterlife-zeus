@@ -7,7 +7,7 @@
  * https://www.iterlife.com
  *
  **/
-package com.iterlife.zeus.lang.model;
+package com.iterlife.zeus.model;
 
 import java.util.Stack;
 
