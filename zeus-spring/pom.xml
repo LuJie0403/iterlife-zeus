@@ -8,7 +8,10 @@
         <version>1.0.0-RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+
+    <name>zeus-spring</name>
     <artifactId>zeus-spring</artifactId>
+    <packaging>jar</packaging>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->

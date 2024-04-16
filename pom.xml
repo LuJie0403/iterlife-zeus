@@ -7,13 +7,10 @@
     <artifactId>zeus</artifactId>
     <version>1.0.0-RELEASE</version>
     <modules>
-        <module>zeus-lang</module>
         <module>zeus-spring</module>
         <module>zeus-demo</module>
         <module>zeus-starter</module>
-        <module>zeus-osf</module>
         <module>zeus-leetcode</module>
-        <module>zeus-jvm</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -22,25 +19,24 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <jar.name>${artifactId}-${version}</jar.name>
-        <context.name>iterlife-spring-boot-home</context.name>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.framework.version>2.5.15</spring.framework.version>
-        <spring.web.version>6.0.18</spring.web.version>
-        <okhttp.version>3.14.3</okhttp.version>
+        <!-- 关注SpringBoot、SpringFramework、JDk 间的版本的依赖关系，包括直接依赖和间接依赖-->
+        <!-- As of Spring Framework 6.0, Spring requires Java 17+.for more: https://stackoverflow.com/questions/74648576/spring-class-file-has-wrong-version-61-0-should-be-55-0-sic-->
+        <!-- <spring.boot.version>3.2.4</spring.boot.version>-->
+        <!-- <spring.web.version>6.1.5</spring.web.version>-->
+        <spring.boot.version>2.6.15</spring.boot.version>
+        <spring.web.version>5.3.30</spring.web.version>
     </properties>
 
     <!-- https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-maven-without-a-parent -->
     <dependencyManagement>
         <dependencies>
+            <!-- 模块自依赖-->
             <dependency>
-                <!-- Import dependency management from Spring Boot -->
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.3.4.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <groupId>com.iterlife</groupId>
+                <artifactId>zeus-start</artifactId>
+                <version>${project.release.version}</version>
             </dependency>
+
             <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
             <dependency>
                 <groupId>javax.servlet</groupId>
@@ -55,17 +51,27 @@
                 <version>1.0</version>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
             <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>3.8.1</version>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.5.0</version>
+                <scope>test</scope>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/cglib/cglib -->
+            <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-core -->
             <dependency>
-                <groupId>cglib</groupId>
-                <artifactId>cglib</artifactId>
-                <version>2.2.2</version>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>1.5.0</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/junit/junit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13.1</version>
+                <scope>test</scope>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina -->
@@ -74,58 +80,74 @@
                 <artifactId>tomcat-catalina</artifactId>
                 <version>8.5.96</version>
             </dependency>
+
             <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
             <dependency>
                 <groupId>org.apache.tomcat</groupId>
                 <artifactId>tomcat-servlet-api</artifactId>
                 <version>8.5.38</version>
             </dependency>
+
             <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.16.16</version>
-                <scope>compile</scope>
+                <version>1.18.30</version>
+                <scope>provided</scope>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.12.0</version>
+            </dependency>
+
             <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>1.2.83</version>
-                <!--<version>1.2.51.sec10</version>-->
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/cglib/cglib -->
             <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.13.1</version>
-                <scope>test</scope>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>3.3.0</version>
             </dependency>
 
             <!-- Spring 基础框架包-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
-                <version>${spring.framework.version}</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-autoconfigure</artifactId>
-                <version>${spring.framework.version}</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-configuration-processor</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring.framework.version}</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
-                <version>${spring.framework.version}</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-test</artifactId>
-                <version>${spring.framework.version}</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <!-- Spring mvc框架包-->
             <dependency>
@@ -189,9 +211,9 @@
         <profile>
             <id>pro</id>
             <properties>
-                <project.release.version>1.0.0.RELEASE</project.release.version>
+                <project.release.version>1.0.0-RELEASE</project.release.version>
                 <project.build.number>RELEASE</project.build.number>
-                <project.service.release.version>1.0.0.${project.build.number}</project.service.release.version>
+                <project.service.release.version>1.0.0-${project.build.number}</project.service.release.version>
             </properties>
         </profile>
     </profiles>
