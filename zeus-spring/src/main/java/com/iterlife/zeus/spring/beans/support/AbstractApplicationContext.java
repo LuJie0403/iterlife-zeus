@@ -1,7 +1,5 @@
 package com.iterlife.zeus.spring.beans.support;
 
-import java.io.IOException;
-
 import com.iterlife.zeus.spring.beans.ApplicationContext;
 import com.iterlife.zeus.spring.beans.BeanFactory;
 import com.iterlife.zeus.spring.beans.ConfigurableApplicationContext;
@@ -13,13 +11,11 @@ import com.iterlife.zeus.spring.core.Resource;
 import com.iterlife.zeus.spring.exception.BeanException;
 import com.iterlife.zeus.spring.exception.NoSuchBeanDefinitionException;
 
-public abstract class AbstractApplicationContext extends DefaultResourceLoader
-                                                                              implements
-                                                                              ConfigurableApplicationContext,
-                                                                              DisposableBean {
+import java.io.IOException;
+
+public abstract class AbstractApplicationContext extends DefaultResourceLoader implements ConfigurableApplicationContext, DisposableBean {
     private ApplicationContext parent;
-    //�����ļ���ַ��������web.xml��
-    private String[]           configLocations;
+    private String[] configLocations;
 
     public AbstractApplicationContext() {
 
@@ -186,8 +182,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
     }
 
     @Override
-    public boolean isTypeMatched(String beanName, Class<?> beanType)
-                                                                 throws NoSuchBeanDefinitionException {
+    public boolean isTypeMatched(String beanName, Class<?> beanType) throws NoSuchBeanDefinitionException {
         // TODO Auto-generated method stub
         return false;
     }
@@ -268,14 +263,12 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
     @Override
     public void close() {
         // TODO Auto-generated method stub
-
     }
 
     public void setConfigLocations(String[] locations) {
         if (locations != null) {
             this.configLocations = new String[locations.length];
             for (int i = 0; i < locations.length; ++i) {
-                //�˴�Ӧ�ý���·����ַ�Ľ�������ͬ�Ĳ���ϵͳ���ַ�ı�ʾ���������
                 this.configLocations[i] = locations[i];
             }
         } else {

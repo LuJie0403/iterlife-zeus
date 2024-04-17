@@ -9,8 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <name>zeus-start</name>
-    <artifactId>zeus-start</artifactId>
+    <name>zeus-starter</name>
+    <artifactId>zeus-starter</artifactId>
     <packaging>jar</packaging>
 
     <properties>

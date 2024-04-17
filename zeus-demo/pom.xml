@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>com.iterlife</groupId>
-            <artifactId>zeus-start</artifactId>
+            <artifactId>zeus-starter</artifactId>
         </dependency>
 
         <dependency>
@@ -27,7 +27,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
