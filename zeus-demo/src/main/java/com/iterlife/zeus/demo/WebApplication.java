@@ -20,6 +20,6 @@ public class WebApplication {
 
         SpringApplication application = new SpringApplication(WebApplication.class);
         application.run(args);
-        log.info(String.format("[%s],iterlife spring boot starter load success.", WELCOME_MSG));
+        log.info(String.format("%s", WELCOME_MSG));
     }
 }

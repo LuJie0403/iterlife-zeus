@@ -10,7 +10,7 @@ import java.util.Map;
  * @date：2019-07-05 17:50
  * @author：lujie
  */
-public class ListObjetcTest {
+public class ListObject {
 
     public static void main(String[] args) {
         testIntegerReference();

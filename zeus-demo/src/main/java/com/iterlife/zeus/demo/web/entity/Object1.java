@@ -1,4 +1,4 @@
-package com.iterlife.zeus.demo.osf;
+package com.iterlife.zeus.demo.web.entity;
 
 /**
  * @desc:

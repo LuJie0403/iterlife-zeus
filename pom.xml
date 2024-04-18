@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.iterlife</groupId>
-    <artifactId>zeus</artifactId>
+    <artifactId>iterlife-zeus</artifactId>
     <version>1.0.0-RELEASE</version>
     <modules>
         <module>zeus-spring</module>

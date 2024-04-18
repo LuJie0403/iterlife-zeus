@@ -5,11 +5,10 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.RejectedExecutionHandler;
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class ThreadPoolExecutorTest {
+public class ThreadPoolExecutor {
 
 	private static final AtomicInteger taskId = new AtomicInteger(1);
 	private static final AtomicInteger threadId = new AtomicInteger(1);
@@ -47,14 +46,14 @@ public class ThreadPoolExecutorTest {
 	 * @param task
 	 */
 	private static void testThreadPoolExecuter(Runnable task) {
-		ThreadPoolExecutor linkedBlockTaskPool1 = new ThreadPoolExecutor(5, 10,
+		java.util.concurrent.ThreadPoolExecutor linkedBlockTaskPool1 = new java.util.concurrent.ThreadPoolExecutor(5, 10,
 				60, TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>());
 		linkedBlockTaskPool1
 				.setRejectedExecutionHandler(new RejectedExecutionHandler() {
 
 					@Override
 					public void rejectedExecution(Runnable r,
-							ThreadPoolExecutor executor) {
+							java.util.concurrent.ThreadPoolExecutor executor) {
 						System.out.println("LinkedBlockingDeque队列已满，抛弃当前任务:"
 								+ r.getClass().getName());
 
@@ -74,14 +73,14 @@ public class ThreadPoolExecutorTest {
 		}
 		System.out.println(
 				"-------------------------------------------------------");
-		ThreadPoolExecutor linkedBlockTaskPool2 = new ThreadPoolExecutor(5, 10,
+		java.util.concurrent.ThreadPoolExecutor linkedBlockTaskPool2 = new java.util.concurrent.ThreadPoolExecutor(5, 10,
 				60, TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>(8));
 		linkedBlockTaskPool2
 				.setRejectedExecutionHandler(new RejectedExecutionHandler() {
 
 					@Override
 					public void rejectedExecution(Runnable r,
-							ThreadPoolExecutor executor) {
+							java.util.concurrent.ThreadPoolExecutor executor) {
 						System.out.println("LinkedBlockingDeque队列已满，抛弃当前任务:"
 								+ r.getClass().getName());
 
@@ -99,14 +98,14 @@ public class ThreadPoolExecutorTest {
 		System.out.println(
 				"-------------------------------------------------------");
 
-		ThreadPoolExecutor linkedBlockTaskPool3 = new ThreadPoolExecutor(5, 10,
+		java.util.concurrent.ThreadPoolExecutor linkedBlockTaskPool3 = new java.util.concurrent.ThreadPoolExecutor(5, 10,
 				60, TimeUnit.SECONDS, new SynchronousQueue<Runnable>(true));
 		linkedBlockTaskPool3
 				.setRejectedExecutionHandler(new RejectedExecutionHandler() {
 
 					@Override
 					public void rejectedExecution(Runnable r,
-							ThreadPoolExecutor executor) {
+							java.util.concurrent.ThreadPoolExecutor executor) {
 						System.out.println("SynchronousQueue队列已满，抛弃当前任务:"
 								+ r.getClass().getName());
 
@@ -123,14 +122,14 @@ public class ThreadPoolExecutorTest {
 		}
 		System.out.println(
 				"-------------------------------------------------------");
-		ThreadPoolExecutor linkedBlockTaskPool4 = new ThreadPoolExecutor(5, 10,
+		java.util.concurrent.ThreadPoolExecutor linkedBlockTaskPool4 = new java.util.concurrent.ThreadPoolExecutor(5, 10,
 				60, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>());
 		linkedBlockTaskPool4
 				.setRejectedExecutionHandler(new RejectedExecutionHandler() {
 
 					@Override
 					public void rejectedExecution(Runnable r,
-							ThreadPoolExecutor executor) {
+							java.util.concurrent.ThreadPoolExecutor executor) {
 						System.out.println("LinkedBlockingQueue队列已满，抛弃当前任务:"
 								+ r.getClass().getName());
 
@@ -148,14 +147,14 @@ public class ThreadPoolExecutorTest {
 		System.out.println(
 				"-------------------------------------------------------");
 
-		ThreadPoolExecutor linkedBlockTaskPool5 = new ThreadPoolExecutor(5, 10,
+		java.util.concurrent.ThreadPoolExecutor linkedBlockTaskPool5 = new java.util.concurrent.ThreadPoolExecutor(5, 10,
 				60, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(8));
 		linkedBlockTaskPool5
 				.setRejectedExecutionHandler(new RejectedExecutionHandler() {
 
 					@Override
 					public void rejectedExecution(Runnable r,
-							ThreadPoolExecutor executor) {
+							java.util.concurrent.ThreadPoolExecutor executor) {
 						System.out.println("LinkedBlockingQueue队列已满，抛弃当前任务:"
 								+ r.getClass().getName());
 
@@ -173,7 +172,7 @@ public class ThreadPoolExecutorTest {
 		System.out.println(
 				"-------------------------------------------------------");
 
-		ThreadPoolExecutor linkedBlockTaskPool6 = new ThreadPoolExecutor(5, 10,
+		java.util.concurrent.ThreadPoolExecutor linkedBlockTaskPool6 = new java.util.concurrent.ThreadPoolExecutor(5, 10,
 				60, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(8),
 				new ThreadFactory() {
 
@@ -188,7 +187,7 @@ public class ThreadPoolExecutorTest {
 
 					@Override
 					public void rejectedExecution(Runnable r,
-							ThreadPoolExecutor executor) {
+							java.util.concurrent.ThreadPoolExecutor executor) {
 						System.out.println("LinkedBlockingQueue队列已满，抛弃当前任务:"
 								+ r.getClass().getName());
 

@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Jdk18xStreamTest 类用于演示和测试 Java 1.8 及以上版本中 Stream API 的用法。
+ * Jdk18xStream 类用于演示和测试 Java 1.8 及以上版本中 Stream API 的用法。
  */
-public class Jdk18xStreamTest {
+public class Jdk18xStream {
     // 该类中包含的示例方法将演示 Stream API 的各种操作，如过滤、映射和收集等。
     /**
      * 主函数入口
@@ -32,7 +32,6 @@ public class Jdk18xStreamTest {
         doTest(users);
 
     }
-
 
 
     /**

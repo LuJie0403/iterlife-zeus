@@ -15,10 +15,10 @@ import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping("/iterlife")
-public class ZeusController {
+public class Controller {
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String home() {
-        return "Welcome to Iterlife Spring Boot! " + LocalDateTime.now();
+        return "Welcome to Iterlife Zeus! " + LocalDateTime.now();
     }
 }

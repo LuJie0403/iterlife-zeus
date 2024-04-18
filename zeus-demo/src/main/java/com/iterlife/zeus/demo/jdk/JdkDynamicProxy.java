@@ -11,11 +11,11 @@ import com.iterlife.zeus.demo.web.service.impl.HelloServiceImp;
 /**
  * @author iter_1024
  */
-public class JdkDynamicProxyTest implements InvocationHandler {
+public class JdkDynamicProxy implements InvocationHandler {
 
 	private final HelloService helloService;
 
-	public JdkDynamicProxyTest(HelloService helloService) {
+	public JdkDynamicProxy(HelloService helloService) {
 		this.helloService = helloService;
 	}
 
@@ -36,7 +36,7 @@ public class JdkDynamicProxyTest implements InvocationHandler {
 		Object proxyObj = Proxy.newProxyInstance(
 				HelloService.class.getClassLoader(),
 				new Class<?>[]{HelloService.class},
-				new JdkDynamicProxyTest(new HelloServiceImp()));
+				new JdkDynamicProxy(new HelloServiceImp()));
 		if (proxyObj instanceof HelloService) {
 			((HelloService) proxyObj).say("Lu Jie");
 		}

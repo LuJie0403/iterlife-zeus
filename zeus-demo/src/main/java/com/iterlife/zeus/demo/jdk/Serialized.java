@@ -1,7 +1,8 @@
-package com.iterlife.zeus.demo.osf;
+package com.iterlife.zeus.demo.jdk;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.iterlife.zeus.demo.web.entity.Object1;
 
 /**
  * @desc:
@@ -9,7 +10,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
  * @version: V1.0.0
  * @datetime: 2021/3/29 17:05
  **/
-public class FastJsonSerializedTest {
+public class Serialized {
 
     public static void main(String args[]) {
         Object1 object1 = Object1.buildDefault();

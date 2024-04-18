@@ -6,9 +6,9 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-public class ThreadLocalTest {
+public class ThreadLocal {
 
-    private static final ThreadLocal mThreadLocal = new ThreadLocal();
+    private static final java.lang.ThreadLocal mThreadLocal = new java.lang.ThreadLocal();
 
     public static void main(String[] args) {
         ThreadPoolExecutor linkedBlockTaskPool = new ThreadPoolExecutor(5, 10,

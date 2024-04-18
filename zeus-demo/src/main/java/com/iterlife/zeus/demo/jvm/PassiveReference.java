@@ -13,7 +13,7 @@ package com.iterlife.zeus.demo.jvm;
  * 初始化
  * 使用卸载
  */
-public class PassiveReferenceTest {
+public class PassiveReference {
 
     public static void main(String[] args) {
         /**常量传播优化*/
