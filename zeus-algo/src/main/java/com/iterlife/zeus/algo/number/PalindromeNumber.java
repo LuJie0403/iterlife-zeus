@@ -23,13 +23,11 @@ class PalindromeNumberSolution {
             return false;
         }
         while (x > result) {
-            System.out.println("Before:x=" + x + ",result=" + result);
             result = result * help + x % help;
             if (x == result) {
                 return true;
             }
             x /= help;
-            System.out.println("After:x=" + x + ",result=" + result);
         }
         return x == result;
     }
