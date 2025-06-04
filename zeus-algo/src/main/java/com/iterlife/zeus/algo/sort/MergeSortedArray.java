@@ -8,18 +8,18 @@ import java.util.Arrays;
  * @version: V1.0.0
  * @datetime: 2021/4/27 08:34
  **/
-public class MergeAortedArray {
-
+public class MergeSortedArray {
+    
     public static void main(String[] args) {
         int[] nums1 = {1, 2, 3, 0, 0, 0};
         int[] nums2 = {2, 5, 6};
         int m = 3, n = 3;
-        new MergeAortedArraySolution().merge(nums1, m, nums2, n);
+        new MergeSortedArraySolution().merge(nums1, m, nums2, n);
         Arrays.stream(nums1).forEach(num -> System.out.println(num));
     }
 }
 
-class MergeAortedArraySolution {
+class MergeSortedArraySolution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int p = m-- + n-- - 1;
         while (m >= 0 && n >= 0) {
@@ -29,7 +29,7 @@ class MergeAortedArraySolution {
             nums1[p--] = nums2[n--];
         }
     }
-
+    
     public void merge1(int[] nums1, int m, int[] nums2, int n) {
         if (m == 0) {
             for (int i = 0; i < n; ++i) {
