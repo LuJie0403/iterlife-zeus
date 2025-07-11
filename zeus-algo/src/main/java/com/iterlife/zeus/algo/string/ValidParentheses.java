@@ -6,7 +6,7 @@ import java.util.Stack;
 /**
  * @author lujie
  * @version V1.0.0
- * @desc https://leetcode.cn/problems/valid-parentheses/description/
+ * @desc https://leetcode.cn/problems/valid-parentheses/
  * @datetime 2025/6/3 12:00
  **/
 public class ValidParentheses {
